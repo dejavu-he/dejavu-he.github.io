@@ -20,15 +20,23 @@
     var CONFIG = {"hostname":"dejavu-he.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="何登的个人博客">
-<meta property="og:url" content="http://dejavu-he.github.io/archives/2021/index.html">
+  <meta name="description" content="二叉树的前序、中序、后序遍历  前序遍历：根节点—&gt;左节点—&gt;右节点 ABDFGCEH 中序遍历：左节点—&gt;根节点—&gt;右节点 BFDGAEHC 后续遍历：左节点—&gt;右节点—&gt;根节点 FGDBHECA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二叉树遍历">
+<meta property="og:url" content="http://dejavu-he.github.io/2021/06/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/index.html">
 <meta property="og:site_name" content="何登的个人博客">
+<meta property="og:description" content="二叉树的前序、中序、后序遍历  前序遍历：根节点—&gt;左节点—&gt;右节点 ABDFGCEH 中序遍历：左节点—&gt;根节点—&gt;右节点 BFDGAEHC 后续遍历：左节点—&gt;右节点—&gt;根节点 FGDBHECA">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/deja-vu/Desktop/083fe07dfe31d6c774879569d4510ba.jpg">
+<meta property="article:published_time" content="2021-06-07T15:29:04.000Z">
+<meta property="article:modified_time" content="2021-06-07T15:31:45.771Z">
 <meta property="article:author" content="何登">
+<meta property="article:tag" content="二叉树">
+<meta property="article:tag" content="遍历">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/deja-vu/Desktop/083fe07dfe31d6c774879569d4510ba.jpg">
 
-<link rel="canonical" href="http://dejavu-he.github.io/archives/2021/">
+<link rel="canonical" href="http://dejavu-he.github.io/2021/06/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/">
 
 
 <script id="page-configurations">
@@ -36,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | 何登的个人博客</title>
+  <title>二叉树遍历 | 何登的个人博客</title>
   
 
 
@@ -159,70 +167,118 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://dejavu-he.github.io/2021/06/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="何登">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="何登的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          二叉树遍历
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-06-07 23:29:04 / 修改时间：23:31:45" itemprop="dateCreated datePublished" datetime="2021-06-07T23:29:04+08:00">2021-06-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T23:29:04+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/06/07/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86/" itemprop="url">
-            <span itemprop="name">二叉树遍历</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-06-07T19:56:04+08:00"
-              content="2021-06-07">
-          06-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/06/07/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <p>二叉树的前序、中序、后序遍历</p>
+<p><img src="C:\Users\deja-vu\Desktop\083fe07dfe31d6c774879569d4510ba.jpg" alt="083fe07dfe31d6c774879569d4510ba"></p>
+<p>前序遍历：根节点—&gt;左节点—&gt;右节点</p>
+<p>ABDFGCEH</p>
+<p>中序遍历：左节点—&gt;根节点—&gt;右节点</p>
+<p>BFDGAEHC</p>
+<p>后续遍历：左节点—&gt;右节点—&gt;根节点</p>
+<p>FGDBHECA</p>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="何登 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="何登 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
-  
-  
-  
+</div>
 
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag"><i class="fa fa-tag"></i> 二叉树</a>
+              <a href="/tags/%E9%81%8D%E5%8E%86/" rel="tag"><i class="fa fa-tag"></i> 遍历</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/07/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
